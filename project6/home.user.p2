@@ -1,0 +1,25 @@
+# Last Modified: Tue Apr  4 06:43:28 2023
+abi <abi/3.0>,
+
+include <tunables/global>
+
+/home/gidwanipooja/cy2550/project6/p2 {
+  include <abstractions/base>
+
+  /home/gidwanipooja/cy2550/project6/p2 mr,
+  /home/gidwanipooja/cy2550/project6/** mr,
+  /tmp/** rw,
+  /home/gidwanipooja/.project2/config rw,
+  /var/log/syslog r,
+  /etc/fstab r,
+  /proc/version r,
+  /proc/buddyinfo r,  
+  /etc/crontab r,
+  /etc/resolv.conf r,
+  /run/systemd/resolve/** r,
+  /etc/passwd r,
+  /etc/hosts r,
+  network tcp,
+  deny /proc/meminfo rw,
+  deny /proc/cpuinfo rw,
+}
